@@ -1,15 +1,17 @@
 import React from "react";
 import * as S from "./styled";
 
-const Atom = () => {
+const Atom = ({ n }) => {
   const layers = {
-    L: { size: 10 },
-    M: { size: 15 },
-    N: { size: 20 },
-    O: { size: 25 },
-    P: { size: 30 },
-    Q: { size: 35 },
+    L: { size: 100 },
+    M: { size: 150 },
+    N: { size: 200 },
+    O: { size: 250 },
+    P: { size: 300 },
+    Q: { size: 350 },
   };
+
+  circuit(10, 10)
 
   return (
     <S.Wrapper>
@@ -21,19 +23,19 @@ const Atom = () => {
   );
 };
 
-function circuit(num, radius, size) {
-  const atom = document.querySelector(`.${level}`);
+function circuit(num, size) {
   const div = 360 / num;
+  const electrons = new Array
   for (var i = 1; i <= num; ++i) {
-    var el = document.createElement("div");
-    el.className = "electron";
-    el.style.position = "absolute";
-    var y = Math.sin(div * i * (Math.PI / 180)) * radius;
-    var x = Math.cos(div * i * (Math.PI / 180)) * radius;
-    el.style.top = (y + 14).toString() + "px";
-    el.style.left = (x + 14).toString() + "px";
-    atom.appendChild(el);
+    var y = Math.sin(div * i * (Math.PI / 180)) * size;
+    var x = Math.cos(div * i * (Math.PI / 180)) * size;
+    electrons.push({
+      top: (y + 203).toString() + "px",
+      left: (x + 203).toString() + "px"
+    })
   }
+  console.log(electrons)
+  return electrons
 }
 
 export default Atom;
