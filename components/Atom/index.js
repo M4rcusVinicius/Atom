@@ -3,6 +3,7 @@ import db from './db'
 import * as S from "./styled";
 
 const Atom = ({ n }) => {
+  console.clear()
   const layers = {
     L: { size: 100 },
     M: { size: 150 },
@@ -12,15 +13,11 @@ const Atom = ({ n }) => {
     Q: { size: 350 },
   };
 
-
-
-  circuit(10, 10)
-
   return (
     <S.Wrapper>
       <S.Center />
-      {Object.values(layers).map((layer) => (
-        <S.Circuit size={layer.size} />
+      {Object.values(layers).map((layer, index) => (
+        <S.Circuit size={layer.size} key={"Layer " + index} />
       ))}
     </S.Wrapper>
   );
@@ -41,35 +38,48 @@ function circuit(num, size) {
   return electrons
 }
 
-function dist(n) {
+function dist(num) {
 
+  const sublevels =   [
+    { limit:   0, layer: 1, e: "s", min: 2, },
+    { limit:   2, layer: 2, e: "s", min: 2, },
+    { limit:   4, layer: 2, e: "p", min: 6, },
+    { limit:  10, layer: 3, e: "s", min: 2, },
+    { limit:  12, layer: 3, e: "p", min: 6, },
+    { limit:  18, layer: 4, e: "s", min: 2, },
+    { limit:  20, layer: 3, e: "d", min: 10,},
+    { limit:  30, layer: 4, e: "p", min: 6, },
+    { limit:  36, layer: 5, e: "s", min: 2, },
+    { limit:  38, layer: 4, e: "d", min: 10,},
+    { limit:  48, layer: 5, e: "p", min: 6, },
+    { limit:  54, layer: 6, e: "s", min: 2, },
+    { limit:  56, layer: 4, e: "f", min: 14,},
+    { limit:  70, layer: 5, e: "d", min: 10,},
+    { limit:  80, layer: 6, e: "p", min: 6, },
+    { limit:  86, layer: 7, e: "s", min: 2, },
+    { limit:  88, layer: 5, e: "f", min: 14,},
+    { limit: 102, layer: 6, e: "d", min: 10,},
+    { limit: 112, layer: 7, e: "p", min: 6, },
+  ]
+
+  const result = {
+    distribution: [],
+    layersNum: [0, 0, 0, 0, 0, 0, 0]
+  }
+  
   function min(min, n) {
     if(n > min) { return min }
     else { return n }
   }
 
-  let r = ''
-  if (n >   0) { r += ' 1s^' + min( 2,  n       ) }
-  if (n >   2) { r += ' 2s^' + min( 2,  n -   2 ) }
-  if (n >   4) { r += ' 2p^' + min( 6,  n -   4 ) }
-  if (n >  10) { r += ' 3s^' + min( 2,  n -  10 ) }
-  if (n >  12) { r += ' 3p^' + min( 6,  n -  12 ) }
-  if (n >  18) { r += ' 4s^' + min( 2,  n -  18 ) }
-  if (n >  20) { r += ' 3d^' + min( 10, n -  20 ) }
-  if (n >  30) { r += ' 4p^' + min( 6,  n -  30 ) }
-  if (n >  36) { r += ' 5s^' + min( 2,  n -  36 ) }
-  if (n >  38) { r += ' 4d^' + min( 10, n -  38 ) }
-  if (n >  48) { r += ' 5p^' + min( 6,  n -  48 ) }
-  if (n >  54) { r += ' 6s^' + min( 2,  n -  54 ) }
-  if (n >  56) { r += ' 4f^' + min( 14, n -  56 ) }
-  if (n >  70) { r += ' 5d^' + min( 10, n -  70 ) }
-  if (n >  80) { r += ' 6p^' + min( 6,  n -  80 ) }
-  if (n >  86) { r += ' 7s^' + min( 2,  n -  86 ) }
-  if (n >  88) { r += ' 5f^' + min( 14, n -  88 ) }
-  if (n > 102) { r += ' 6d^' + min( 10, n - 102 ) }
-  if (n > 112) { r += ' 7p^' + min( 6,  n - 112 ) }
+  sublevels.forEach(s => {
+    if(num > s.limit) {
+      result.distribution.push([s.layer + s.e, min(s.min, num - s.limit)])
+      result.layersNum[s.layer - 1] = result.layersNum[s.layer + 1] + min(s.min, num - s.limit)
+    }
+  })
 
-  return r
+  return result
 }
 
 export default Atom;
