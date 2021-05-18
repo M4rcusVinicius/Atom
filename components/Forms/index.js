@@ -1,7 +1,7 @@
 import React from "react"
 import * as S from "./styled"
 
-const Forms = () => {
+const Forms = ({ number, setNumber }) => {
   return (
   <S.Wrapper>
     <S.Container>
@@ -12,6 +12,8 @@ const Forms = () => {
         size='4rem'
         min='1'
         max='118'
+        value={number}
+        onChange={ev => setNumber(ev.target.value)}
       />
     </S.Container>
     <S.Container>

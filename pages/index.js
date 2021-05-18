@@ -10,6 +10,7 @@ import Forms from '../components/Forms'
 
 export default function Home() {
   const [number, setNumber] = React.useState(1)
+  const [atom, setAtom] = React.useState({})
 
   return (
     <Layout>
@@ -21,7 +22,7 @@ export default function Home() {
       <Atom />
       <Main>
         <Header />
-        <Forms />
+        <Forms number={number} setNumber={setNumber} />
       </Main>
     </Layout>
   )
