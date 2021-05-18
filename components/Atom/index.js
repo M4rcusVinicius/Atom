@@ -1,9 +1,9 @@
 import React from "react";
 // import db from './db'
-// import { distribution, circuit } from './process'
+import { distribution, circuit } from './process'
 import * as S from "./styled";
 
-const Atom = ({ n }) => {
+const Atom = ({ number }) => {
   const layers = {
     L: { size: 100 },
     M: { size: 150 },
@@ -12,6 +12,12 @@ const Atom = ({ n }) => {
     P: { size: 300 },
     Q: { size: 350 },
   };
+
+  React.useEffect(() => {
+    const dist = distribution(number)
+    console.log("Distribution:", dist.distribution)
+  }, [number])
+
 
   return (
     <S.Wrapper>

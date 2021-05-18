@@ -66,7 +66,6 @@ const GlobalStyles = createGlobalStyle`
   }
   input:focus {
     outline: none;
-    border: none;
   }
   input[type=number] {
     -moz-appearance: textfield;
