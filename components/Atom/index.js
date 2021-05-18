@@ -1,10 +1,9 @@
 import React from "react";
-import db from './db'
-import { distribution, circuit } from './precess'
+// import db from './db'
+// import { distribution, circuit } from './process'
 import * as S from "./styled";
 
 const Atom = ({ n }) => {
-  console.clear()
   const layers = {
     L: { size: 100 },
     M: { size: 150 },
