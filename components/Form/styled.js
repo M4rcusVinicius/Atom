@@ -1,12 +1,16 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
   padding: 2rem 1rem;
+`
+
+export const NumberContainer = styled.div`
+  padding: 0 0 1rem;
   display: flex;
   align-items: center;
 `
 
-export const Text = styled.span`
+export const Text = styled.p`
   font-size: 1.2rem;
   color: #dddde3;
   font-weight: 600;
