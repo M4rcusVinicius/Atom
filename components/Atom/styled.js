@@ -33,8 +33,8 @@ export const Circle = styled.div`
   position: absolute;
   border-radius: 50%;
   background-color: lightblue;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   top: ${props => props.top};
   left: ${props => props.left};
 `

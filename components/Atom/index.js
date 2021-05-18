@@ -1,6 +1,8 @@
 import React from "react";
 // import db from './db'
 import { distribution, circuit } from './process'
+import Electrons from './Electrons'
+
 import * as S from "./styled";
 
 const Atom = ({ number }) => {
@@ -34,7 +36,7 @@ const Atom = ({ number }) => {
 
     console.log("Electrons Map:", electronsMap)
     const electronsPos = electronsMap.map(el => {
-      if (el) { return circuit(el.number, el.size) }
+      if (el) { return circuit(el.number, el.size / 2) }
       return false
     })
 
@@ -50,10 +52,12 @@ const Atom = ({ number }) => {
         if (!electron) { return false }
         const size = layers[index].size
         return (
-          <S.Circuit size={size} key={"Layer " + index} />
+          <>
+            <S.Circuit size={size} key={"Layer " + index} />
+            <Electrons electron={electron} />
+          </>
         )
       })}
-      <S.Circle top="10px" left="10px" />
     </S.Wrapper>
   );
 };
