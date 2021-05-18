@@ -7,25 +7,25 @@ const Atom = ({ number }) => {
 
   const [electrons, setElectrons] = React.useState([])
 
-  const layers = {
-    L: { size: 100 },
-    M: { size: 150 },
-    N: { size: 200 },
-    O: { size: 250 },
-    P: { size: 300 },
-    Q: { size: 350 },
-  };
+  const layers = [
+    { size: 100 },
+    { size: 150 },
+    { size: 200 },
+    { size: 250 },
+    { size: 300 },
+    { size: 350 },
+  ];
 
   React.useEffect(() => {
     const dist = distribution(number)
 
-    console.log("")
+    console.log(" ")
     console.log("Distribution:", dist.distribution)
     console.log("layersNum:", dist.layersNum)
 
     const electronsMap = dist.layersNum.map((num, index) => {
       if (Number(num) > 0) { 
-        const size = Object.values(layers)[index].size
+        const size = layers[index].size
         return (
           { number: num, size: size }
       )}
@@ -46,9 +46,13 @@ const Atom = ({ number }) => {
   return (
     <S.Wrapper>
       <S.Center />
-      {Object.values(layers).map((layer, index) => (
-        <S.Circuit size={layer.size} key={"Layer " + index} />
-      ))}
+      {electrons.map((electron, index) => {
+        if (!electron) { return false }
+        const size = layers[index].size
+        return (
+          <S.Circuit size={size} key={"Layer " + index} />
+        )
+      })}
       <S.Circle top="10px" left="10px" />
     </S.Wrapper>
   );
