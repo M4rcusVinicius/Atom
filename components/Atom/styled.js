@@ -28,3 +28,13 @@ export const Circuit = styled.div`
   transform: translate(-50%, -50%);
   border: 2px dashed #5c97ff;
 `
+
+export const Circle = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  background-color: lightblue;
+  width: 20px;
+  height: 20px;
+  top: ${props => props.top};
+  left: ${props => props.left};
+`

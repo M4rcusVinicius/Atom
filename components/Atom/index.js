@@ -25,6 +25,7 @@ const Atom = ({ number }) => {
       {Object.values(layers).map((layer, index) => (
         <S.Circuit size={layer.size} key={"Layer " + index} />
       ))}
+      <S.Circle top="10px" left="10px" />
     </S.Wrapper>
   );
 };
