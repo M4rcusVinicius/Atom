@@ -17,7 +17,7 @@ const Atom = ({ number }) => {
     { size: 580 },
   ]; 
 
-  const [play, setPlay] = React.useState(false)
+  const [play, setPlay] = React.useState(true)
   const [atom, setAtom] = React.useState(() => {
     const at = db[6]
     at.electrons = at.layers.map((q, index) => circuit(q, layers[index].size / 2))
@@ -43,7 +43,6 @@ const Atom = ({ number }) => {
         {play ? <I.Stop /> : <I.Play /> }        
       </S.Button>
       {atom.electrons.map((electrons, index) =>  {
-        console.log('Electrons:', electrons.map(pos => pos))
         return (
         <S.Layer rotate={play} direction={index & 1 ? 'normal' : 'reverse'}>
           <S.Circuit size={layers[index].size} key={"Layer " + index} />

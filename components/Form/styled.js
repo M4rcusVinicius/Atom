@@ -18,6 +18,12 @@ export const Text = styled.p`
   margin-right: 1rem; 
 `
 
+export const Result = styled.p`
+  font-size: 1.2rem;
+  color: #dddde3;
+  margin: 1rem 0; 
+`
+
 export const Number = styled.input`
   padding: .5rem .8rem;
   width: 4rem;
