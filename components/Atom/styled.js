@@ -1,11 +1,10 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export const Wrapper = styled.section`
   position: relative;
   width: 640px;
   height: 640px;
   background-color: black;
-  transform: scale(.9);
 `
 
 export const Center = styled.div`
@@ -17,6 +16,20 @@ export const Center = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #96bcff;
+`
+
+const rotate = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
+
+export const Layer = styled.div`
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  top: 0;
+  left: 0;
+  /* animation: ${rotate} 4s linear infinite; */
 `
 
 export const Circuit = styled.div`
