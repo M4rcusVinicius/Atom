@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     line-height: 1.4;
     letter-spacing: 0.069rem;
     font-size: 1rem;
-    color: var(--primary);
+    color: #dee0e4;
   }
   input {
     outline: none;
@@ -62,7 +62,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0.5rem;
     background-color: transparent;
     font-size: 1rem;
-    color: var(--primary);
+    color: #dee0e4;
   }
   input:focus {
     outline: none;

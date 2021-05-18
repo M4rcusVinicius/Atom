@@ -11,6 +11,5 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h1`
   font-size: 1.2rem;
-  color: #dee0e4;
   font-weight: 600;
 `;
