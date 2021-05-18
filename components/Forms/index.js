@@ -4,7 +4,26 @@ import * as S from "./styled"
 const Forms = () => {
   return (
   <S.Wrapper>
-    Forms
+    <S.Container>
+      <S.Text>Número Atômico:</S.Text>
+      <S.Input 
+        type='number'
+        placeholder='0'
+        size='4rem'
+        min='1'
+        max='118'
+      />
+    </S.Container>
+    <S.Container>
+      <S.Text>Nome:</S.Text>
+      <S.InputText
+        type='text'
+        placeholder='Digite o nome ou o simbolo'
+        size='20rem'
+        min='1'
+        max='118'
+      />
+    </S.Container>
   </S.Wrapper>
 )}
 
