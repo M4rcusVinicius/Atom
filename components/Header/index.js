@@ -1,9 +1,9 @@
 import React from "react"
 import * as S from "./styled"
 
-const Main = ({ children }) => (
+const Main = () => (
     <S.Wrapper>
-      { children }
+      Hello
     </S.Wrapper>
   )
 
