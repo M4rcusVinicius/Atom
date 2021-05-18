@@ -5,8 +5,8 @@ export const circuit = (num, size) => {
     var y = Math.sin(div * i * (Math.PI / 180)) * size;
     var x = Math.cos(div * i * (Math.PI / 180)) * size;
     electrons.push({
-      top: (y + 218).toString() + "px",
-      left: (x + 218).toString() + "px"
+      top: (y + 314).toString() + "px",
+      left: (x + 314).toString() + "px"
     })
   }
   return electrons

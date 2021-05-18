@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const Wrapper = styled.section`
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 640px;
+  height: 640px;
   background-color: black;
   `
 
@@ -33,8 +33,8 @@ export const Circle = styled.div`
   position: absolute;
   border-radius: 50%;
   background-color: lightblue;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   top: ${props => props.top};
   left: ${props => props.left};
 `

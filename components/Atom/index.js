@@ -8,12 +8,12 @@ const Atom = ({ number }) => {
 
   const layers = [
     { size: 100 },
-    { size: 150 },
-    { size: 200 },
-    { size: 250 },
-    { size: 300 },
-    { size: 350 },
-    { size: 400 },
+    { size: 180 },
+    { size: 260 },
+    { size: 340 },
+    { size: 420 },
+    { size: 500 },
+    { size: 580 },
   ]; 
 
   const [atom, setAtom] = React.useState(() => {
