@@ -1,9 +1,12 @@
 import React from "react"
 import * as S from "./styled"
 
-const Result = () => (
+const Result = ({ name }) => (
   <S.Wrapper>
-    Result
+    <S.Container>
+      <S.Title>Nome:</S.Title>
+      <S.Text>{name}</S.Text>
+    </S.Container>
   </S.Wrapper>
 )
 

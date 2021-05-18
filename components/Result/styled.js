@@ -10,4 +10,12 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  font-size: 1.1rem;
+`;
+
+export const Title = styled.div`
+  font-weight: 600;
+`;
+
+export const Text = styled.div`
 `;
