@@ -2,7 +2,7 @@ import db from './db'
 
 const Attributes = (number) => {
   const atom = db[number]
-  console.log(atom)
+  console.log("Atom:", atom)
   return atom
 }
 

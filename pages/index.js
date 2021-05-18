@@ -8,9 +8,15 @@ import Main from '../components/Main'
 import Header from '../components/Header'
 import Forms from '../components/Forms'
 
+import attributes from '../dataBase/attributes'
+
 export default function Home() {
   const [number, setNumber] = React.useState(1)
   const [atom, setAtom] = React.useState({})
+
+  React.useEffect(() => {
+    setAtom(attributes(number))
+  }, [number])
 
   return (
     <Layout>
