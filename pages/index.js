@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Atom from '../components/Atom'
 import Main from '../components/Main'
 import Header from '../components/Header'
+import Forms from '../components/Forms'
 
 export default function Home() {
   const [number, setNumber] = React.useState(1)
@@ -20,6 +21,7 @@ export default function Home() {
       <Atom />
       <Main>
         <Header />
+        <Forms />
       </Main>
     </Layout>
   )
