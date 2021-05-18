@@ -1,13 +1,12 @@
 import React from "react";
-// import db from './db'
-import { distribution, circuit } from './process'
-import Electrons from './Electrons'
+import db from "./db";
+import { circuit } from "./process";
+import Electrons from "./Electrons";
 
 import * as S from "./styled";
 
 const Atom = ({ number }) => {
-
-  const [electrons, setElectrons] = React.useState([])
+  const [atom, setAtom] = React.useState(db[6]);
 
   const layers = [
     { size: 100 },
@@ -19,45 +18,20 @@ const Atom = ({ number }) => {
   ];
 
   React.useEffect(() => {
-    const dist = distribution(number)
-
-    console.log(" ")
-    console.log("Distribution:", dist.distribution)
-    console.log("layersNum:", dist.layersNum)
-
-    const electronsMap = dist.layersNum.map((num, index) => {
-      if (Number(num) > 0) { 
-        const size = layers[index].size
-        return (
-          { number: num, size: size }
-      )}
-      return false
-    })
-
-    console.log("Electrons Map:", electronsMap)
-    const electronsPos = electronsMap.map(el => {
-      if (el) { return circuit(el.number, el.size / 2) }
-      return false
-    })
-
-    console.log("Electrons:", electronsPos)
-    setElectrons(electronsPos)
-  }, [number])
-
+    const at = db[number]
+    at.electron = at.layers.map((q, index) => circuit(q, layers[index].size / 2))
+    console.log(at)
+  }, [number]);
 
   return (
     <S.Wrapper>
       <S.Center />
-      {electrons.map((electron, index) => {
-        if (!electron) { return false }
-        const size = layers[index].size
-        return (
-          <>
-            <S.Circuit size={size} key={"Layer " + index} />
-            <Electrons electron={electron} />
-          </>
-        )
-      })}
+      {/* {atom.layers.map((layer, index) =>  (
+        <>
+          <S.Circuit size={layers[index].size} key={"Layer " + index} />
+          <Electrons electron={layer} />
+        </>
+      ))} */}
     </S.Wrapper>
   );
 };
