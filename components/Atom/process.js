@@ -1,3 +1,4 @@
+
 export const circuit = (num, size) => {
   const div = 360 / num;
   const electrons = new Array
@@ -10,4 +11,11 @@ export const circuit = (num, size) => {
     })
   }
   return electrons
+}
+
+export const size = () => {
+  const height = window.innerHeight
+  const width = window.window.innerWidth
+  if (height < width) { return height }
+  return width
 }

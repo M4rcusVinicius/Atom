@@ -2,8 +2,8 @@ import styled, { keyframes } from "styled-components"
 
 export const Wrapper = styled.section`
   position: relative;
-  width: 640px;
-  height: 640px;
+  width: ${ props => props.size };
+  height: ${ props => props.size };
   background-color: black;
   overflow: hidden;
 `
