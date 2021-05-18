@@ -7,6 +7,7 @@ import Atom from '../components/Atom'
 import Main from '../components/Main'
 import Header from '../components/Header'
 import Forms from '../components/Forms'
+import Result from '../components/Result'
 
 import attributes from '../dataBase/attributes'
 
@@ -29,6 +30,7 @@ export default function Home() {
       <Main>
         <Header />
         <Forms number={number} setNumber={setNumber} />
+        <Result />
       </Main>
     </Layout>
   )
