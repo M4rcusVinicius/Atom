@@ -5,7 +5,8 @@ export const Wrapper = styled.section`
   width: 640px;
   height: 640px;
   background-color: black;
-  `
+  transform: scale(.9);
+`
 
 export const Center = styled.div`
   position: absolute;
