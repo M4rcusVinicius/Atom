@@ -5,6 +5,25 @@ export const Wrapper = styled.section`
   width: 640px;
   height: 640px;
   background-color: black;
+  overflow: hidden;
+`
+
+export const Button = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 5px;
+  z-index: 10;
+  color: #dddde3;
+  cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    background-color: #264886;
+  }
 `
 
 export const Center = styled.div`
@@ -29,7 +48,8 @@ export const Layer = styled.div`
   height: 640px;
   top: 0;
   left: 0;
-  /* animation: ${rotate} 4s linear infinite; */
+  animation: ${rotate} 4s linear ${props => props.rotate ? 'infinite' : '0'};
+  animation-direction: ${props => props.direction};
 `
 
 export const Circuit = styled.div`
@@ -41,6 +61,7 @@ export const Circuit = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px dashed #5c97ff;
+  border-radius: 50%;
 `
 
 export const Circle = styled.div`

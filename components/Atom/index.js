@@ -3,6 +3,7 @@ import db from "./db";
 import { circuit } from "./process";
 
 import * as S from "./styled";
+import * as I from "@styled-icons/boxicons-regular/";
 
 const Atom = ({ number }) => {
 
@@ -36,10 +37,15 @@ const Atom = ({ number }) => {
   return (
     <S.Wrapper>
       <S.Center />
+      <S.Button
+        onClick={() => {setPlay(!play)}}
+      >
+        {play ? <I.Stop /> : <I.Play /> }        
+      </S.Button>
       {atom.electrons.map((electrons, index) =>  {
         console.log('Electrons:', electrons.map(pos => pos))
         return (
-        <S.Layer>
+        <S.Layer rotate={play} direction={index & 1 ? 'normal' : 'reverse'}>
           <S.Circuit size={layers[index].size} key={"Layer " + index} />
           {electrons.map((pos, i) => (
             <S.Circle top={pos.top} left={pos.left} key={`Electron ${i} - (${pos.top}, ${pos.left})'`}/>
