@@ -75,7 +75,7 @@ export default {
     ],
     layers: [2, 6],
     name: "Oxigênio",
-    symbol: "0",
+    symbol: "O",
   },
   9: {
     n: 9,

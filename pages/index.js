@@ -30,7 +30,7 @@ export default function Home() {
       <Main>
         <Header />
         <Forms number={number} setNumber={setNumber} />
-        <Result />
+        <Result atom={atom} />
       </Main>
     </Layout>
   )
