@@ -16,7 +16,8 @@ export default function Home() {
   const [atom, setAtom] = React.useState({})
 
   React.useEffect(() => {
-    setAtom(attributes(number))
+    const att = attributes(number)
+    if(att) { setAtom(att) }
   }, [number])
 
   return (
