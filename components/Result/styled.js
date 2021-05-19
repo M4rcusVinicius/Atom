@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   margin: .5rem 2rem;
-  margin-right: 1.5rem;
   padding: 2rem;
+  padding-right: 1.5rem;
   border-radius: 5px;
   background-color: black;
 `;
