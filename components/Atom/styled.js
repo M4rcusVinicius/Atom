@@ -19,6 +19,14 @@ export const Core = styled.div`
   background-color: #96bcff;
 `;
 
+export const Layer = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  top: 0;
+  left: 0;
+`
+
 export const Circuit = styled.div`
   position: absolute;
   border-radius: 50%;
@@ -29,4 +37,14 @@ export const Circuit = styled.div`
   transform: translate(-50%, -50%);
   border: 2px dashed #5c97ff;
   border-radius: 50%;
+`
+
+export const Electron = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  background-color: red;
+  width: 14px;
+  height: 14px;
+  top: ${props => `calc( (${props.top} * ((((${props.index} * 100vh) / 7) + 20px) / 2)) + ( (100vh / 2) - 7px ) )` };
+  left: ${props => `calc( (${props.left} * ((((${props.index} * 100vh) / 7) + 20px) / 2)) + ( (100vh / 2) - 7px ) )` };
 `

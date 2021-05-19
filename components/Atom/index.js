@@ -6,9 +6,16 @@ const Atom = ({ layers }) => {
     <S.Wrapper>
       <S.Core />
       { layers && layers.map((amount, index) => {
-          console.log("Layer position:", calcPosition(amount, index))
+          const electronPosition = calcPosition(amount, index)
           return (
-            <S.Circuit index={(index + 1)} />
+            <S.Layer >
+              <S.Circuit index={(index + 1)} />
+              {
+                electronPosition.map(pos => (
+                  <S.Electron top={pos.top} left={pos.left} index={(index + 1)} />
+                ))
+              }
+            </S.Layer>
           )
         })
       }
