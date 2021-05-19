@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components"
 
 export const Wrapper = styled.div`
   background-color: black;
@@ -7,6 +7,24 @@ export const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
+export const Button = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 5px;
+  z-index: 10;
+  color: #dddde3;
+  cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    background-color: #264886;
+  }
+`
 
 export const Core = styled.div`
   position: absolute;
@@ -19,12 +37,19 @@ export const Core = styled.div`
   background-color: #96bcff;
 `;
 
+const rotate = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
+
 export const Layer = styled.div`
   position: absolute;
   height: 100vh;
   width: 100vh;
   top: 0;
   left: 0;
+  animation: ${rotate} ${props => props.play ? '4s' : '0s'} linear infinite;
+  animation-direction: ${props => props.direction};
 `
 
 export const Circuit = styled.div`
