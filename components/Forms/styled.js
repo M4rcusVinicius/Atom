@@ -37,7 +37,7 @@ export const InputText = styled.input`
 
 export const SelectWrapper = styled.div`
   position: absolute;
-  bottom: -1rem;
+  top: 5.9rem;
   left: 0;
   width: 100%;
   padding: 0 2rem;
@@ -47,5 +47,34 @@ export const Select = styled.div`
   width: 100%;
   padding: .8rem;
   background-color: blue;
+  border-radius: 5px;
 `;
+
+export const Item = styled.div`
+  width: 12rem;
+  height: 2.7rem;
+  padding: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: red;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+export const Symbol = styled.div`
+  border-radius: 5px;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+  background-color: purple;
+`;
+
+export const Name = styled.span`
+  width: 9rem;
+  font-size: 1rem;
+`;
+
+
 
