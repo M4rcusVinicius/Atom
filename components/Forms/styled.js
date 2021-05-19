@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 
 export const Container = styled.div`
@@ -34,7 +35,17 @@ export const InputText = styled.input`
 `;
 
 
-export const Select = styled.div`
+export const SelectWrapper = styled.div`
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  padding: 0 2rem;
+`;
 
+export const Select = styled.div`
+  width: 100%;
+  padding: .8rem;
+  background-color: blue;
 `;
 

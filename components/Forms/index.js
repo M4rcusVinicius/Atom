@@ -1,4 +1,6 @@
 import React from "react"
+
+import Select from './Select'
 import * as S from "./styled"
 
 const Forms = ({ number, setNumber }) => {
@@ -26,6 +28,7 @@ const Forms = ({ number, setNumber }) => {
         max='118'
       />
     </S.Container>
+    <Select />
   </S.Wrapper>
 )}
 
