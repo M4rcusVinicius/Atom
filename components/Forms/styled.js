@@ -46,26 +46,27 @@ export const SelectWrapper = styled.div`
 export const Select = styled.div`
   width: 100%;
   padding: .8rem;
-  background-color: blue;
+  background-color: #000;
   border-radius: 5px;
+  height: 20rem;
 `;
 
 export const Item = styled.div`
+  border: 1px #62656a solid;
   width: 12rem;
-  height: 2.7rem;
-  padding: .2rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: red;
+  background-color: #090c10;
   border-radius: 5px;
   cursor: pointer;
 `;
 
 export const Symbol = styled.div`
-  border-radius: 5px;
-  width: 2.3rem;
-  height: 2.3rem;
+  border-radius: 5px 0 0 5px;
+  width: calc(2.5rem - 2px);
+  height: calc(2.5rem - 2px);
   display: flex;
   align-items: center;
   background-color: purple;
