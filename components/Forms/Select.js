@@ -6,7 +6,8 @@ const Select = () => {
   <S.SelectWrapper>
     <S.Select>
       <S.Item>
-        <S.Symbol></S.Symbol>
+        <S.Symbol>P</S.Symbol>
+        <S.Name>Fósforo</S.Name>
       </S.Item>
     </S.Select>
   </S.SelectWrapper>

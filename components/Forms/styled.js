@@ -61,7 +61,12 @@ export const Item = styled.div`
   background-color: #090c10;
   border-radius: 5px;
   cursor: pointer;
-`;
+  transition: 200ms;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`
 
 export const Symbol = styled.div`
   border-radius: 5px 0 0 5px;
@@ -70,10 +75,15 @@ export const Symbol = styled.div`
   display: flex;
   align-items: center;
   background-color: purple;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #c2c4c7;
 `;
 
 export const Name = styled.span`
-  width: 9rem;
+  width: 8.7rem;
   font-size: 1rem;
 `;
 
