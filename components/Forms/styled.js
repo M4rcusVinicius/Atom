@@ -41,7 +41,6 @@ export const SelectWrapper = styled.div`
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  display: ${props => props.select ? 'block' : 'none'}
 `;
 
 export const SelectContainer = styled.div`
