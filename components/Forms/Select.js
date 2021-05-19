@@ -1,22 +1,20 @@
 import React from "react"
 import * as S from "./styled"
 
-const Select = ({ search, setNumber }) => {
+const Select = ({ search, select }) => {
   return (
-  <S.SelectWrapper>
+  <S.SelectWrapper select={select}>
     <S.SelectContainer>
       <S.Select>
         {
           search.map((element) => {
-          if (element) {
-            const name = element[0]
-            return (
-              <S.Item key={name} onClick={() => setNumber(element[1] + 1)}>
-                <S.Symbol>{name.split('(')[1].replace(')', '')}</S.Symbol>
-                <S.Name>{name}</S.Name>
-              </S.Item>
-            )
-          }})
+          console.log(element)
+          return (
+            <S.Item key={element}>
+              <S.Symbol>{element.split('(')[1].replace(')', '')}</S.Symbol>
+              <S.Name>{element}</S.Name>
+            </S.Item>
+          )})
         }
       </S.Select>
     </S.SelectContainer>
