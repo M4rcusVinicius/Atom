@@ -40,6 +40,8 @@ const Forms = ({ number, setNumber }) => {
         max='118'
         value={name}
         onChange={ev => setName(ev.target.value)}
+        onClick={() => setSelect(true)}
+        onBlur={() => setSelect(false)}
       />
     </S.Container>
     <Select search={search} select={select} />
