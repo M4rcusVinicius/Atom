@@ -57,7 +57,7 @@ export const Layer = styled.div`
   width: 100vh;
   top: 0;
   left: 0;
-  animation: ${rotate} ${props => props.play ? '4s' : '0s'} linear infinite;
+  animation: ${rotate} ${props => props.play ? '7s' : '0s'} linear infinite;
   animation-direction: ${props => props.direction};
 `
 
