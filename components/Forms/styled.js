@@ -49,6 +49,10 @@ export const Select = styled.div`
   background-color: #000;
   border-radius: 5px;
   height: 20rem;
+  display: grid;
+  grid-area: element;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 `;
 
 export const Item = styled.div`
