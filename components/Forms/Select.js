@@ -1,9 +1,9 @@
 import React from "react"
 import * as S from "./styled"
 
-const Select = ({ search }) => {
+const Select = ({ search, select }) => {
   return (
-  <S.SelectWrapper>
+  <S.SelectWrapper select={select}>
     <S.SelectContainer>
       <S.Select>
         {

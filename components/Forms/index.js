@@ -8,6 +8,7 @@ const Forms = ({ number, setNumber }) => {
 
   const [name, setName] = React.useState('')
   const [search, setSearch] = React.useState([])
+  const [select, setSelect] = React.useState(false)
 
   React.useEffect(() => {
     if (name) {
@@ -41,7 +42,7 @@ const Forms = ({ number, setNumber }) => {
         onChange={ev => setName(ev.target.value)}
       />
     </S.Container>
-    <Select search={search} />
+    <Select search={search} select={select} />
   </S.Wrapper>
 )}
 
