@@ -32,6 +32,7 @@ export const Atom = styled.div`
   width: 100vh;
   top: 0;
   left: 0;
+  transform: ${props => `scale(${props.size})`};
 `;
 
 export const Core = styled.div`

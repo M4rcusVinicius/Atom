@@ -4,7 +4,7 @@ import * as I from "@styled-icons/boxicons-regular/";
 
 const Atom = ({ layers }) => {
   const [play, setPlay] = React.useState(true);
-  console.log('Layers:', layers.length)
+  const size = [2, 1.8, 1.7, 1.4, 1.3, 1.1, 1,  .9]
 
   return (
     <S.Wrapper>
@@ -15,7 +15,7 @@ const Atom = ({ layers }) => {
       >
         {play ? <I.Stop /> : <I.Play />}
       </S.Button>
-      <S.Atom >
+      <S.Atom size={size[layers.length]}>
         <S.Core />
         {layers &&
           layers.map((amount, index) => {
