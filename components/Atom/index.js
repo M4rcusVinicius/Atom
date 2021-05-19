@@ -4,6 +4,7 @@ import * as I from "@styled-icons/boxicons-regular/";
 
 const Atom = ({ layers }) => {
   const [play, setPlay] = React.useState(true);
+  console.log('Layers:', layers.length)
 
   return (
     <S.Wrapper>
@@ -14,19 +15,21 @@ const Atom = ({ layers }) => {
       >
         {play ? <I.Stop /> : <I.Play />}
       </S.Button>
-      <S.Core />
-      {layers &&
-        layers.map((amount, index) => {
-          const electronPosition = calcPosition(amount, index);
-          return (
-            <S.Layer play={play} direction={index & 1 ? 'normal' : 'reverse'}>
-              <S.Circuit index={index + 1} />
-              {electronPosition.map((pos) => (
-                <S.Electron top={pos.top} left={pos.left} index={index + 1} />
-              ))}
-            </S.Layer>
-          );
-        })}
+      <S.Atom >
+        <S.Core />
+        {layers &&
+          layers.map((amount, index) => {
+            const electronPosition = calcPosition(amount, index);
+            return (
+              <S.Layer play={play} direction={index & 1 ? 'normal' : 'reverse'}>
+                <S.Circuit index={index + 1} />
+                {electronPosition.map((pos) => (
+                  <S.Electron top={pos.top} left={pos.left} index={index + 1} />
+                ))}
+              </S.Layer>
+            );
+          })}
+      </S.Atom>
     </S.Wrapper>
   );
 };

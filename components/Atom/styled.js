@@ -26,6 +26,14 @@ export const Button = styled.div`
   }
 `
 
+export const Atom = styled.div`
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  top: 0;
+  left: 0;
+`;
+
 export const Core = styled.div`
   position: absolute;
   border-radius: 50%;
