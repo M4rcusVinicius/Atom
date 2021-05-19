@@ -22,8 +22,8 @@ export const Core = styled.div`
 export const Circuit = styled.div`
   position: absolute;
   border-radius: 50%;
-  width: ${props => props.size + 'px'};
-  height: ${props => props.size + 'px'};
+  width: ${props => `calc(((${props.index} * 100vh) / 7) + 20px)` };
+  height: ${props => `calc(((${props.index} * 100vh) / 7) + 20px)` };
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

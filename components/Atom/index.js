@@ -2,20 +2,20 @@ import React from "react"
 import * as S from "./styled"
 
 const Atom = ({ layers }) => {
-  console.log('Layers:', layers)
   return (
     <S.Wrapper>
       <S.Core />
-      {
-        layers.map((amount, index) => {
+      { layers && layers.map((amount, index) => {
           console.log("Layer position:", calcPosition(amount, index))
+          return (
+            <S.Circuit index={(index + 1)} />
+          )
         })
       }
-      <S.Circuit size={100} />
     </S.Wrapper>
 )}
 
-const calcPosition = (amount, index) => {
+const calcPosition = (amount) => {
   // Multiplicar pelo raio e subtrair pela metade da altura total menos a metade do átomo => res * size - ( width / 2 - rad / 2 )
   const div = 360 / amount
   const electrons = new Array
