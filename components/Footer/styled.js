@@ -33,3 +33,13 @@ export const ProfileInfo = styled.div``;
 export const Name = styled.div`
   font-weight: 600;
 `;
+
+export const Social = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
+export const Icon = styled.div`
+  height: 1.2rem;
+  width: 1.2rem;
+`;
