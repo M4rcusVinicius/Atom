@@ -43,21 +43,26 @@ export const SelectWrapper = styled.div`
   padding: 0 2rem;
 `;
 
-export const Select = styled.div`
+export const SelectContainer = styled.div`
   width: 100%;
-  padding: .8rem;
+  padding: 1.5rem;
   background-color: #000;
   border-radius: 5px;
   height: 20rem;
+`;
+
+export const Select = styled.div`
+  width: 100%;
   display: grid;
-  grid-area: element;
   grid-gap: .5rem;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(12.5rem,1fr));
+  overflow: auto;
+  scrollbar-width: thin;
 `;
 
 export const Item = styled.div`
   border: 1px #62656a solid;
-  width: 12rem;
+  width: 12.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
