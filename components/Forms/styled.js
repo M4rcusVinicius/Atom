@@ -33,3 +33,8 @@ export const InputText = styled.input`
   border-radius: 5px;
 `;
 
+
+export const Select = styled.div`
+
+`;
+
