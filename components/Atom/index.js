@@ -15,7 +15,7 @@ const Atom = ({ layers }) => {
       >
         {play ? <I.Stop /> : <I.Play />}
       </S.Button>
-      <S.Atom size={size[layers.length]}>
+      <S.Atom size={layers && size[layers.length]}>
         <S.Core />
         {layers &&
           layers.map((amount, index) => {
