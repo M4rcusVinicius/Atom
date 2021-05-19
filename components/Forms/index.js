@@ -11,7 +11,7 @@ const Forms = ({ number, setNumber }) => {
 
   React.useEffect(() => {
     if (name) {
-      setSearch(searchDB.filter(element => element.indexOf(name) !== -1))
+      setSearch(searchDB.filter(element => element.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) !== -1))
     }
   }, [name])
 

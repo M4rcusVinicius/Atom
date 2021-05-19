@@ -52,17 +52,18 @@ export const SelectContainer = styled.div`
 `;
 
 export const Select = styled.div`
+  max-height: 17rem;
   width: 100%;
   display: grid;
-  grid-gap: .5rem;
-  grid-template-columns: repeat(auto-fit,minmax(12.5rem,1fr));
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
   overflow: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 `;
 
 export const Item = styled.div`
   border: 1px #62656a solid;
-  width: 12.5rem;
+  width: 12rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
