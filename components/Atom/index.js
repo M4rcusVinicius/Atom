@@ -4,7 +4,7 @@ import * as S from "./styled"
 const Atom = () => {
   return (
   <S.Wrapper>
-    Atom
+    <S.Core />
   </S.Wrapper>
 )}
 
