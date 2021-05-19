@@ -1,9 +1,20 @@
 import React from "react"
 
+import searchDB from './searchDB'
 import Select from './Select'
 import * as S from "./styled"
 
 const Forms = ({ number, setNumber }) => {
+
+  const [name, setName] = React.useState('')
+  const [search, setSearch] = React.useState([])
+
+  React.useEffect(() => {
+    if (name) {
+      setSearch(searchDB.filter(element => element.indexOf(name) !== -1))
+    }
+  }, [name])
+
   return (
   <S.Wrapper>
     <S.Container>
@@ -26,9 +37,11 @@ const Forms = ({ number, setNumber }) => {
         size='20rem'
         min='1'
         max='118'
+        value={name}
+        onChange={ev => setName(ev.target.value)}
       />
     </S.Container>
-    <Select />
+    <Select search={search} />
   </S.Wrapper>
 )}
 
