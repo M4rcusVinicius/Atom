@@ -13,8 +13,10 @@ const Footer = () => (
           height={80}
         />
       </S.Image>
+      <S.ProfileInfo>
+        <S.Name>Desenvolvido por Marcus Vinícius</S.Name>
+      </S.ProfileInfo>
     </S.Profile>
-    <S.Title>Distribuição Eletrônica de Linus Pauling</S.Title>
   </S.Wrapper>
 )
 

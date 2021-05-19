@@ -17,6 +17,8 @@ export const Title = styled.h1`
 `;
 
 export const Profile = styled.div`
+  align-items: center;
+  display: flex;
 `;
 
 export const Image = styled.div`
@@ -26,4 +28,8 @@ export const Image = styled.div`
   margin-right: .8rem;
 `;
 
-export const Name = styled.div``;
+export const ProfileInfo = styled.div``;
+
+export const Name = styled.div`
+  font-weight: 600;
+`;
