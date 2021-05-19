@@ -16,7 +16,14 @@ export const Title = styled.h1`
   font-weight: 600;
 `;
 
-export const Profile = styled.img`
-  width: 2.5rem;
-  height: 2.5rem;
+export const Profile = styled.div`
 `;
+
+export const Image = styled.div`
+  border: 4px solid black;
+  height: 55px;
+  width: 55px;
+  margin-right: .8rem;
+`;
+
+export const Name = styled.div``;
