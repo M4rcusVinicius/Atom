@@ -116,6 +116,7 @@ export const Item = styled.div`
   border-radius: 5px;
   cursor: pointer;
   transition: 200ms;
+  margin-bottom: .8rem;
 
   &:hover {
     transform: scale(1.02);

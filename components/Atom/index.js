@@ -21,7 +21,7 @@ const Atom = ({ layers }) => {
           layers.map((amount, index) => {
             const electronPosition = calcPosition(amount, index);
             return (
-              <S.Layer play={play} direction={index & 1 ? 'normal' : 'reverse'} key={index}>
+              <S.Layer play={play} direction={index & 1 ? 'normal' : 'reverse'} key={index.toString()}>
                 <S.Circuit index={index + 1} />
                 {electronPosition.map((pos) => (
                   <S.Electron top={pos.top} left={pos.left} index={index + 1} />
