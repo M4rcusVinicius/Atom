@@ -6,12 +6,21 @@ export const Wrapper = styled.div`
   padding-right: 1.5rem;
   border-radius: 5px;
   background-color: black;
+
+  @media(max-width: 450px) {
+    margin: .2rem 1rem 0;
+    padding: 1.2rem;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   font-size: 1.1rem;
+  
+  @media(max-width: 450px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.div`
@@ -26,6 +35,12 @@ export const Text = styled.div`
 export const Distribution = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media(max-width: 450px) {
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
 `;
 
 export const DistItem = styled.div`
