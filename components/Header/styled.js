@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   background-color: #161b22;
   display: flex;
   align-items: center;
+
+  @media(max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h1`
