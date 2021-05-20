@@ -2,7 +2,6 @@ import React from "react"
 import Image from 'next/image'
 import * as S from "./styled"
 import * as I from "@styled-icons/boxicons-logos/"
-import { Envelope } from "@styled-icons/boxicons-regular/Envelope"
 
 const Footer = () => (
   <S.Wrapper>
@@ -20,9 +19,6 @@ const Footer = () => (
         <S.Social>
           <S.Icon href='https://twitter.com/m4rcus_vin1cius' target="_blank" >
             <I.Twitter />
-          </S.Icon>
-          <S.Icon href='marcus.vinicius.mvap@gmail.com' target="_blank">
-            <Envelope />
           </S.Icon>
           <S.Icon href='https://discord.com/users/436946870787637248' target="_blank">
             <I.Discord />
