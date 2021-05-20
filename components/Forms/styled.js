@@ -41,12 +41,12 @@ export const SelectWrapper = styled.div`
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  display: ${props => props.select ? 'block' : 'none'}
+  display: ${props => props.select ? 'block' : 'none'};
 `;
 
 export const SelectContainer = styled.div`
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.5rem 1.2rem;
   background-color: #000;
   border-radius: 5px;
   height: 20rem;
@@ -64,7 +64,7 @@ export const Select = styled.div`
 
 export const Item = styled.div`
   border: 1px #62656a solid;
-  width: 12rem;
+  width: 12.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
@@ -81,11 +81,11 @@ export const Item = styled.div`
 
 export const Symbol = styled.div`
   border-radius: 5px 0 0 5px;
-  width: calc(2.5rem - 2px);
+  width: 2.8rem;
   height: calc(2.5rem - 2px);
   display: flex;
   align-items: center;
-  background-color: purple;
+  background-color: #320d68;
   font-size: 1.2rem;
   display: flex;
   justify-content: center;
@@ -96,6 +96,9 @@ export const Symbol = styled.div`
 export const Name = styled.span`
   width: 8.7rem;
   font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 

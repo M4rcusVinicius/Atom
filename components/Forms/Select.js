@@ -13,7 +13,7 @@ const Select = ({ search, select, setNumber }) => {
             const index = element[1]
             return (
               <S.Item key={name} onClick={() => setNumber(index + 1)}>
-                <S.Symbol>{name.split('(')[1].replace(')', '')}</S.Symbol>
+                <S.Symbol >{name.split('(')[1].replace(')', '')}</S.Symbol>
                 <S.Name>{name}</S.Name>
               </S.Item>
             )
