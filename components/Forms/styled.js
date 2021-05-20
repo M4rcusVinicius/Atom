@@ -7,6 +7,12 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+
+  @media(max-width: 450px) {
+    flex-direction: column;
+    justify-content: start;
+    padding: 2rem .5rem;
+  }
 `;
 
 export const Container = styled.div`
@@ -25,6 +31,10 @@ export const Input = styled.input`
   width: 4rem;
   border: 1px #62656a solid;
   border-radius: 5px;
+
+  @media(max-width: 450px) {
+    width: 2rem;
+  }
 `;
 
 export const InputText = styled.input`
