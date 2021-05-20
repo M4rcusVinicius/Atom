@@ -41,7 +41,7 @@ const Forms = ({ number, setNumber }) => {
         value={name}
         onChange={ev => setName(ev.target.value)}
         onClick={() => setSelect(true)}
-        onBlur={() => setTimeout(setSelect(false), 500)}
+        onBlur={() => setTimeout(setSelect(false), 200)}
       />
     </S.Container>
     <Select search={search} select={select} />
