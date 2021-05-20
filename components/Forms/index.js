@@ -12,7 +12,14 @@ const Forms = ({ number, setNumber }) => {
 
   React.useEffect(() => {
     if (name) {
-      setSearch(searchDB.filter(element => element.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) !== -1))
+      setSearch(
+        searchDB.map((element, index) => {
+          if ( element.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) !== -1 ) {
+            return [element, index]
+          }
+          return false
+        })
+      )
     }
   }, [name])
 
@@ -41,10 +48,10 @@ const Forms = ({ number, setNumber }) => {
         value={name}
         onChange={ev => setName(ev.target.value)}
         onClick={() => setSelect(true)}
-        onBlur={() => setTimeout(setSelect(false), 200)}
+        onBlur={() => setTimeout(() => setSelect(false), 200)}
       />
     </S.Container>
-    <Select search={search} select={select} />
+    <Select search={search} select={select} setNumber={setNumber} />
   </S.Wrapper>
 )}
 

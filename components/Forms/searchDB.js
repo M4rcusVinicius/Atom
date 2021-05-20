@@ -71,7 +71,7 @@ export default [
   "Itérbio (Yb)",
   "Lutécio (Lu)",
   "Háfnio (Hf)",
-  "Tântalo (tantálio) (Ta)",
+  "Tântalo (Ta)",
   "Tungstênio (W)",
   "Rênio (Re)",
   "Ósmio (Os)",
