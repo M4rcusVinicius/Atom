@@ -39,7 +39,19 @@ export const Social = styled.div`
   display: flex;
 `;
 
-export const Icon = styled.div`
-  height: 1.2rem;
-  width: 1.2rem;
+export const Icon = styled.a`
+  height: 1.5rem;
+  width: 1.8rem;
+  margin: .5rem .1rem 0 0;
+  padding: .2rem .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 200ms;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #002e6c;
+  }
 `;
