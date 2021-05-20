@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   background-color: black;
   height: 100vh;
   width: 100vh;

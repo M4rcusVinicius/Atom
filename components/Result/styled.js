@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   background-color: black;
 
   @media(max-width: 450px) {
-    margin: .2rem 1rem 0;
+    margin: .2rem 1rem 2rem;
     padding: 1.2rem;
   }
 `;
