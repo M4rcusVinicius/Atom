@@ -46,28 +46,22 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        
         <title>Átomo</title>
+        <meta name="title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
+        <meta name="title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
+        <link rel="icon" href="/atom.ico" />
 
-        <!-- Primary Meta Tags -->
-        <meta name="title" content="Átomo - Distribuição Eletrônica de Linus Pauling">
-        <meta name="description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico">
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://atomo.vercel.app/"/>
+        <meta property="og:title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
+        <meta property="og:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico"/>
+        <meta property="og:image" content="/banner.png"/>
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://atomo.vercel.app/">
-        <meta property="og:title" content="Átomo - Distribuição Eletrônica de Linus Pauling">
-        <meta property="og:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico">
-        <meta property="og:image" content="/banner.png">
-
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://atomo.vercel.app/">
-        <meta property="twitter:title" content="Atomo - Distribuição Eletrônica de Linus Pauling">
-        <meta property="twitter:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico">
-        <meta property="twitter:image" content="/banner.png">
-
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://atomo.vercel.app/"/>
+        <meta property="twitter:title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
+        <meta property="twitter:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico"/>
+        <meta property="twitter:image" content="/banner.png"/>
       </Head>
       <Atom layers={atom.layers} />
       <Main>
