@@ -109,7 +109,7 @@ export default [
   "Hássio (Hs)",
   "Meitnério (Mt)",
   "Darmstácio (Ds)",
-  "Roentgénio (Roentgênio) (Rg)",
+  "Roentgénio (Rg)",
   "Copernício (Cn)",
   "Unúntrio (Uut)",
   "Fleróvio (Fl)",

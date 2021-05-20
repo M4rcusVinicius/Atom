@@ -12,14 +12,9 @@ const Forms = ({ number, setNumber }) => {
 
   React.useEffect(() => {
     if (name) {
-      setSearch(
-        searchDB.map((element, index) => {
-          if ( element.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) !== -1 ) {
-            return [element, index]
-          }
-          return false
-        })
-      )
+      setSearch(() => find(name))
+    } else {
+      setSearch(() => find(' '))
     }
   }, [name])
 
@@ -54,5 +49,14 @@ const Forms = ({ number, setNumber }) => {
     <Select search={search} select={select} setNumber={setNumber} />
   </S.Wrapper>
 )}
+
+const find = (name) => (
+  searchDB.map((element, index) => {
+    if ( element.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) !== -1 ) {
+      return [element, index]
+    }
+    return false
+  })
+)
 
 export default Forms
