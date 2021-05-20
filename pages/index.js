@@ -55,13 +55,13 @@ export default function Home() {
         <meta property="og:url" content="https://atomo.vercel.app/"/>
         <meta property="og:title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
         <meta property="og:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico"/>
-        <meta property="og:image" content="/banner.png"/>
+        <meta property="og:image" content="https://atomo.vercel.app/banner.png"/>
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://atomo.vercel.app/"/>
         <meta property="twitter:title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
         <meta property="twitter:description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico"/>
-        <meta property="twitter:image" content="/banner.png"/>
+        <meta property="twitter:image" content="https://atomo.vercel.app/banner.png"/>
       </Head>
       <Atom layers={atom.layers} />
       <Main>
