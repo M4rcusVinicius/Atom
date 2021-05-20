@@ -21,7 +21,7 @@ const Forms = ({ number, setNumber }) => {
   return (
   <S.Wrapper>
     <S.Container>
-      <S.Text>Número Atômico:</S.Text>
+      <S.Text displayMobile="block">Número Atômico:</S.Text>
       <S.Input 
         type='number'
         placeholder='0'
@@ -33,7 +33,7 @@ const Forms = ({ number, setNumber }) => {
       />
     </S.Container>
     <S.Container>
-      <S.Text>Nome:</S.Text>
+      <S.Text displayMobile="none" >Nome:</S.Text>
       <S.InputText
         type='text'
         placeholder='Digite o nome ou o simbolo'

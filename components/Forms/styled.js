@@ -10,20 +10,31 @@ export const Wrapper = styled.div`
 
   @media(max-width: 450px) {
     flex-direction: column;
-    justify-content: start;
-    padding: 2rem .5rem;
+    align-items: flex-start;
+    padding: 2rem 1rem;
   }
 `;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  
+  @media(max-width: 450px) {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
 `;
 
 export const Text = styled.div`
   font-size: 1.1rem;
   margin-right: .8rem;
   margin-bottom: .1rem;
+
+  @media(max-width: 450px) {
+    font-size: 1rem;
+    display: ${props => props.displayMobile};
+  }
 `;
 
 export const Input = styled.input`
@@ -33,7 +44,9 @@ export const Input = styled.input`
   border-radius: 5px;
 
   @media(max-width: 450px) {
-    width: 2rem;
+    width: 7rem;
+    font-size: .9rem;
+    padding: .4rem .7rem;
   }
 `;
 
@@ -42,6 +55,12 @@ export const InputText = styled.input`
   width: 20rem;
   border: 1px #62656a solid;
   border-radius: 5px;
+
+  @media(max-width: 450px) {
+    width: 100%;
+    font-size: .9rem;
+    padding: .4rem .7rem;
+  }
 `;
 
 
