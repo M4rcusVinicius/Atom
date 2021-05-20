@@ -12,6 +12,15 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem 1rem 0;
+    ${props => props.select && `
+      position: absolute;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: #090c10;
+      z-index: 20;
+      justify-content: start;
+    `}
   }
 `;
 
@@ -75,6 +84,9 @@ export const SelectWrapper = styled.div`
   @media(max-width: 450px) {
     top: 8rem;
     padding: 0 1rem;
+    ${props => props.select && `
+      display: block;
+    `}
   }
 `;
 
@@ -88,6 +100,10 @@ export const SelectContainer = styled.div`
   @media(max-width: 450px) {
     padding: 1rem;
     height: calc(100vh - 100vw - 14rem);
+
+    ${props => props.select && `
+      height: calc(100vh - 10rem);
+    `}
   }
 `;
 
@@ -102,6 +118,10 @@ export const Select = styled.div`
 
   @media(max-width: 450px) {
     height: calc(100vh - 100vw - 16rem);
+
+    ${props => props.select && `
+      height: calc(100vh - 12rem);
+    `}
   }
 `;
 

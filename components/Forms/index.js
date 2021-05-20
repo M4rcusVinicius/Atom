@@ -19,7 +19,7 @@ const Forms = ({ number, setNumber }) => {
   }, [name])
 
   return (
-  <S.Wrapper>
+  <S.Wrapper select={select}>
     <S.Container>
       <S.Text displayMobile="block">Número Atômico:</S.Text>
       <S.Input 
@@ -32,7 +32,7 @@ const Forms = ({ number, setNumber }) => {
         onChange={ev => setNumber(ev.target.value)}
       />
     </S.Container>
-    <S.Container>
+    <S.Container >
       <S.Text displayMobile="none" >Nome:</S.Text>
       <S.InputText
         type='text'

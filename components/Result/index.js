@@ -28,7 +28,7 @@ const formatDistribution = (distribution) => {
     <>
     {
       distribution.map((el, index) => (
-        <S.DistItem key={'Distribution' + index}>
+        <S.DistItem key={'Distribution' + index + el[0] + el[1]}>
           <S.DistText>{el[0] + el[1]}</S.DistText>
           <S.DistNumber>{el[2]}</S.DistNumber>
         </S.DistItem>
