@@ -48,7 +48,7 @@ export default function Home() {
       <Head>
         <title>Átomo</title>
         <meta name="title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
-        <meta name="title" content="Átomo - Distribuição Eletrônica de Linus Pauling"/>
+        <meta name="description" content="Distribuição de Linus Pauling com ilustração gráfica do átomo. Similar a uma tabela periódica interativa, apresenta as camadas de energia de forma gráfica com os respectivos átomos . Além de apresentar o nome, simulo e número atômico"/>
         <link rel="icon" href="/atom.ico" />
 
         <meta property="og:type" content="website"/>
