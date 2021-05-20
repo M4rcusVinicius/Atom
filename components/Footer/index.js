@@ -32,6 +32,7 @@ const Footer = () => (
         </S.Social>
       </S.ProfileInfo>
     </S.Profile>
+    <S.Report></S.Report>
   </S.Wrapper>
 )
 
