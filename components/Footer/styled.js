@@ -54,4 +54,8 @@ export const Icon = styled.a`
   &:hover {
     background-color: #002e6c;
   }
+
+  &:visited {
+    color: #dee0e4;
+  }
 `;

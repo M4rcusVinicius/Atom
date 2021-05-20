@@ -18,19 +18,19 @@ const Footer = () => (
       <S.ProfileInfo>
         <S.Name>Desenvolvido por Marcus Vinícius</S.Name>
         <S.Social>
-          <S.Icon>
+          <S.Icon href='https://twitter.com/m4rcus_vin1cius' target="_blank" >
             <I.Twitter />
           </S.Icon>
-          <S.Icon>
+          <S.Icon href='marcus.vinicius.mvap@gmail.com' target="_blank">
             <Envelope />
           </S.Icon>
-          <S.Icon>
+          <S.Icon href='https://discord.com/users/436946870787637248' target="_blank">
             <I.Discord />
           </S.Icon>
-          <S.Icon>
+          <S.Icon href='https://github.com/M4rcusVinicius' target="_blank">
             <I.Github />
           </S.Icon>
-          <S.Icon>
+          <S.Icon href='https://www.linkedin.com/in/marcus-vinicius-almeida-pires-b194691b6/' target="_blank">
             <I.Linkedin />
           </S.Icon>
         </S.Social>
