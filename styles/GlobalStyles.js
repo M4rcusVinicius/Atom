@@ -55,6 +55,7 @@ const GlobalStyles = createGlobalStyle`
     letter-spacing: 0.069rem;
     font-size: 1rem;
     color: #dee0e4;
+    background-color: black;
   }
   input {
     outline: none;

@@ -8,5 +8,6 @@ export const Wrapper = styled.div`
   @media(max-width: 450px) {
     height: calc(100% - 100vw);
     width: 100%;
+    border: none;
   }
 `;

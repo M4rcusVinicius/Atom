@@ -10,11 +10,11 @@ export const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
   justify-content: space-between;
-`;
 
-export const Title = styled.h1`
-  font-size: 1.2rem;
-  font-weight: 600;
+  @media(max-width: 450px) {
+    padding: 0 1rem;
+    width: 100%;
+  }
 `;
 
 export const Profile = styled.div`
@@ -27,12 +27,22 @@ export const Image = styled.div`
   height: 55px;
   width: 55px;
   margin-right: .8rem;
+
+  @media(max-width: 450px) {
+    height: 55px;
+    width: 55px;
+  }
 `;
 
 export const ProfileInfo = styled.div``;
 
 export const Name = styled.div`
   font-weight: 600;
+
+  @media(max-width: 450px) {
+    font-size: .7rem;
+    width: 7rem;
+  }
 `;
 
 export const Social = styled.div`
@@ -65,6 +75,13 @@ export const Icon = styled.a`
   &:visited {
     color: #dee0e4;
   }
+
+  @media(max-width: 450px) {
+    height: 1rem;
+    width: 1.2rem;
+    margin: .2rem .1rem 0 0;
+    padding: .1rem .2rem;
+  }
 `;
 
 export const Report = styled.a`
@@ -92,5 +109,10 @@ export const Report = styled.a`
   &:visited {
     text-decoration: none;
     color: #dee0e4;
+  }
+
+  @media(max-width: 450px) {
+    padding: .3rem .8rem;
+    font-size: .9rem;
   }
 `;
