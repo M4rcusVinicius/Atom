@@ -64,6 +64,7 @@ export const Icon = styled.a`
   text-decoration: none;
   transition: 200ms;
   border-radius: 2px;
+  color: #dee0e4;
 
   &:hover {
     background-color: #002e6c;
@@ -97,6 +98,7 @@ export const Report = styled.a`
   border: 1px solid #62656a;
   background-color: #112136;
   text-decoration: none;
+  color: #dee0e4;
 
   &:hover {
     background-color: #102b4d;
