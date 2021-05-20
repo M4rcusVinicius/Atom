@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   position: absolute;
   bottom: 0;
+  justify-content: space-between;
 `;
 
 export const Title = styled.h1`
@@ -48,14 +49,48 @@ export const Icon = styled.a`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  text-decoration: none;
   transition: 200ms;
   border-radius: 2px;
 
   &:hover {
     background-color: #002e6c;
   }
+  &:active {
+    background-color: #002e6c;
+    text-decoration: none;
+    color: #dee0e4;
+  }
 
   &:visited {
+    color: #dee0e4;
+  }
+`;
+
+export const Report = styled.a`
+  padding: .7rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 200ms;
+  border-radius: 5px;
+  border: 1px solid #62656a;
+  background-color: #112136;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #102b4d;
+  }
+  
+  &:active {
+    text-decoration: none;
+    background-color: darkblue;
+    color: #dee0e4;
+  }
+
+  &:visited {
+    text-decoration: none;
     color: #dee0e4;
   }
 `;

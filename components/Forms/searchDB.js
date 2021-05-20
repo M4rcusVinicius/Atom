@@ -91,7 +91,7 @@ export default [
   "Tório (Th)",
   "Protactínio (Pa)",
   "Urânio (U)",
-  "Ne(p)túnio (Np)",
+  "Neptúnio (Np)",
   "Plutônio (Pu)",
   "Amerício (Am)",
   "Cúrio (Cm)",

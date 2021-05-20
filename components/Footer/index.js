@@ -32,7 +32,7 @@ const Footer = () => (
         </S.Social>
       </S.ProfileInfo>
     </S.Profile>
-    <S.Report></S.Report>
+    <S.Report href='https://github.com/M4rcusVinicius/Chemistry/issues/new' target="_blank">Reportar bug ou erro</S.Report>
   </S.Wrapper>
 )
 
