@@ -24,7 +24,7 @@ const Atom = ({ layers }) => {
               <S.Layer play={play} direction={index & 1 ? 'normal' : 'reverse'} key={index + amount}>
                 <S.Circuit index={index + 1} />
                 {electronPosition.map((pos) => (
-                  <S.Electron top={pos.top} left={pos.left} index={index + 1} />
+                  <S.Electron top={pos.top} left={pos.left} index={index + 1} key={pos.top + pos.left}/>
                 ))}
               </S.Layer>
             );
